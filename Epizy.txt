@@ -1,0 +1,7 @@
+Ftp Podaci:
+
+
+FTP Hostname: ftpupload.net Port 21
+Username    : epiz_29865402
+Password    : Matejko15
+

@@ -1,0 +1,48 @@
+
+label
+{
+ font-size: 1.4em;
+}
+
+textarea
+{
+   position:relative;
+   /* margin-right: 12.5em; */
+    
+
+}
+#PrviGlavni
+{
+border-left: 1em solid white;
+    border-right: 1em solid white;
+}
+.text-sirina
+{
+    width:9.5em;
+}
+body
+{
+    background-color: yellow;
+}
+.text-boja
+{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+   
+}
+#top-div
+{
+    background-color: deepskyblue;
+    height: 5em;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+h1
+{
+    color:yellow;
+    font-weight: bold;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px red, 0 0 1em yellow, 0 0 0.2em blue;
+    
+}

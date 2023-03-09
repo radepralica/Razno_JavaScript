@@ -1,0 +1,98 @@
+h1
+{
+   text-align: center;
+}
+label
+{
+padding-right:2em;
+color:whitesmoke;
+    
+}
+#txtobim
+{
+    margin-left: 3em;
+}
+#JednakostObim
+{
+    margin-left: 3em;
+}
+.btnKrug
+{
+float:right;
+    margin-right: 6em;
+    //margin-top: 2em;
+    color:greenyellow;
+}
+hr
+{
+    border: 1px solid white;
+}
+.poravnaj-lijevo
+{
+ margin-left: 2em;
+}
+#obimPravougaonika
+{
+    margin-left: 3.5em;
+}
+#povrsinaPravougaonika
+{
+   margin-left: 2.5em; 
+}
+#rombVisina
+{
+    margin-left: 1.7em;
+}
+
+#btnKocka
+{
+ margin-left: 11em;
+    color: yellow;
+}
+
+div
+{
+    border: 3px solid white
+}
+h1
+{
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+body
+{
+    background: yellow
+}
+
+.label-obim
+{
+ color: whitr;font-weight: bold"
+}
+
+.button-left
+{
+ margin-left: 6em
+}
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    //padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid white;
+}
+.frac span.symbol {
+    display: none;
+} 
+
+.kocka-left
+{
+    padding-right:1em;
+}

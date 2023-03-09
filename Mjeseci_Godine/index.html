@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/Mjeseci_Godine/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css"
+    rel="stylesheet" id="bootstrap-css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>Mjeseci i Godine</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css"
+    rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+</head>
+
+<body class="container" style="background:whitesmoke">
+
+  <!--  Navbar-->
+  <nav style="font-weight: bold;font-size: 1.2em" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">Procenat</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"
+            href="https://www.programiranje.co.rs/alati/latinica-%D1%9B%D0%B8%D1%80%D0%B8%D0%BB%D0%B8%D1%86%D0%B0"
+            target="_self">Ćirilica/Latinica <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Kalkulator_drva/index.html" target="_self">Kalkulator za drvo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Geometrijska_tijela/index.html" target="_self">Geometrijska Tijela</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--   Navbar Kraj-->
+  <h1 id="H1GodMjes" class="bg-info">Godine i mjeseci</h1>
+  <br> <br>
+  <div class="container bg-info text-white ">
+    <br>
+    <label class="form-label" id="lblGodine" for="">Godine</label>
+    <input class="form-control bold" id="upisGodine" value="0" type="number">
+    <label class="form-label" for="">Mjeseci</label>
+    <input class="form-control bold" id="upisMjeseci" value="0" type="number">
+    <button class="btn btn-danger" type="button" id="btnIzracGodMjes">Izračunaj</button>
+    <br>
+    <hr>
+    <label class="form-label" for="">Godine/Mjeseci</label>
+    <input class="form-control bold" id="rezGodineMjes" type="text">
+    <label class="form-label" for="">Mjeseci</label>
+    <input class="form-control bold" id="rezMjes" type="text">
+    <br>
+  </div>
+  <div class="container izracun">
+    <label class="form-label text-center">Izračun Razlike između Datuma</label>
+    <p></p>
+  </div>
+  <section>
+    <main>
+      <div id="glavni" class="container">
+        <div class="date-input">
+          <div class="birth">
+            <div class="title">
+              <label style="font-weight:bold;color: blue;font-size: 1.1em">Početni Datum:</label>
+            </div>
+            <div class="field">
+              <input type="text" id="pocetni" placeholder="Kliknite ovdje " class="date form-control"
+                style="width: 200px; margin-left: 1em" />
+              <br>
+              <script type="text/javascript">
+                $(".date").datepicker(
+                  {
+                    format: "d MM yyyy",
+                    autoclose: true,
+                  });
+              </script>
+            </div>
+          </div>
+          <div class="date-now">
+            <div class="title">
+              <label style="font-weight: bold ; color: blue;font-size: 1.1em">Krajnji Datum :</label>
+            </div>
+            <div class="field">
+              <input type="text" id="krajnji" placeholder="Kliknite ovdje" class="date form-control"
+                style="width: 200px;margin-left: 1em" />
+              <br> <br>
+              <script type="text/javascript">
+                $(".date").datepicker(
+                  {
+                    format: "d MM yyyy",
+                    autoclose: true,
+                  });
+              </script>
+              <script type="text/javascript">
+              </script>
+            </div>
+          </div>
+          <div class="btn">
+            <button class="btn-lg btn-success" type="button">Izračunaj</button>
+          </div>
+        </div>
+        <br> <br>
+        <div class="result-input">
+          <div class="box-result">
+            <div class="year">
+              <h1>0</h1>
+              <p class="ispis">Godina</p>
+            </div>
+            <div class="months">
+              <h1>0</h1>
+              <p class="ispis">Mjeseci</p>
+            </div>
+            <div class="day">
+              <h1>0</h1>
+              <p class="ispis">Dana</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <h1 id="kraj"></h1>
+    </main>
+  </section>
+
+  <script>
+    $('#pocetni').val(new Date().toJSON().slice(0, 10));
+    $('#krajnji').val(new Date().toISOString().slice(0, 10));
+  </script>
+  <script src="/Mjeseci_Godine/script.js"></script>
+</body>
+
+</html>

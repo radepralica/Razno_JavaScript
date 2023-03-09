@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="index.css">
+    
+    <title>Površina , Obim i Zapremina Geometrijskih Tijela</title>
+  </head>
+  <body>
+    <!--  Navbar-->
+  <nav style="font-weight: bold;font-size: 1.2em" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a style="margin-left: 9em;font-weight: bold" class="navbar-brand" href="/index.html">Procenat</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"
+            href="https://www.programiranje.co.rs/alati/latinica-%D1%9B%D0%B8%D1%80%D0%B8%D0%BB%D0%B8%D1%86%D0%B0"
+            target="_self">Ćirilica/Latinica <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+                 <a class="nav-link" href="/Kalkulator_drva/index.html" target="_self">Kalkulator za drvo</a>
+        </li>
+
+
+
+        <li class="nav-item">
+         
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Mjeseci_Godine/index.html" target="_self">Izračun Mjeseci</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <!--   Navbar Kraj-->
+   <br><br>
+    <h1 class=" text-info">Površina i obim </h1>
+<br><br>
+    <div  class="container-fluid">
+       <div class="row">
+           <div class="container col-4 bg-success">
+               <h1 class="text-white" >Krug
+               
+               </h1>
+              <br>
+              <label>Polupreč:</label>
+              <input id="poluprKruga" class="poravnaj-lijevo  " type="text" placeholder="Poluprečnik">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left: 3em" id="obimKruga" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label>Površina:</label>
+              <input id="povrsinaKruga" class="poravnaj-lijevo" type="text" placeholder="Površina">
+              <hr>
+              <label class="label-obim" for="">O=2rπ</label>
+              <br>
+              <label class="label-obim" for="">P=r<sup>2</sup>π</label>
+              <button  class="btn text-white bg-danger button-left" onclick="Krug()" >Izračunaj</button>
+            </div>
+           
+           <div class="container col-4 bg-info">
+               
+             <h1 class="text-white" >Kvadrat</h1>
+              <br>
+              <label>Stranica :</label>
+              <input id="stranicaA" class="poravnaj-lijevo" type="text" placeholder="Stranica a">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left:3em" id="obimKvadrata" type="text" placeholder="Obim">
+              
+             
+              <br> <br>
+              <label>Površina:</label>
+              <input id="povrsinaKvadrata" class="poravnaj-lijevo" type="text" placeholder="Površina">
+              <hr>
+               <label class="label-obim" for="">O=4*a</label>
+              <br>
+              <label class="label-obim" for="">P=a<sup>2</sup></label>
+           <button  class="btn text-white bg-danger button-left" onclick="Kvadrat()" >Izračunaj</button>
+           
+           
+           </div>
+           
+           <div class="container col-4 bg-warning">
+               
+             <h1 class="text-white" >Pravougaonik</h1>
+              <br>
+              <label>Stranica a:</label>
+              <input id="pravougaonikA" class="poravnaj-lijevo" type="text" placeholder="Stranica a">
+              <br> <br>
+              <label>Stranica b:</label>
+              <input id="pravougaonikB" class="poravnaj-lijevo" type="text" placeholder="Stranica b">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input  id="obimPravougaonika" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label>Površina:</label>
+              
+              <input id="povrsinaPravougaonika" type="text" placeholder="Površina">
+              <hr>
+             <label class="label-obim" for="">O=2*(a+b)</label>
+             
+              <br>
+              <label class="label-obim" for="">P=a*b</label>
+              <button  class="btn text-white bg-danger button-left" onclick="Pravougaonik()">Izračunaj</button>
+              <br><br>
+           </div>
+           
+       </div> 
+    </div>
+    
+   
+    <div class="container-fluid">
+       <div class="row">
+           <div class="container col-4 bg-success">
+               <h1 class="text-white" >Jednakostranični trougao</h1>
+              <br>
+              <label>Stranica :</label>
+              <input id="JednakostA" class="poravnaj-lijevo" type="text" placeholder="Stranica A">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input  id="JednakostObim" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label>Površina:</label>
+              <input id="JednakostrPovrsina" class="poravnaj-lijevo" type="text" placeholder="Površina">
+              <hr>
+              
+              <label class="label-obim" for="">O=3*a</label>
+             
+              <br>
+              <span style="color: white">P=</span>
+              <label class="label-obim frac" for="">
+                 
+                  <span>a<sup>2</sup>*√3</span>
+    <span  class="symbol">/</span>
+    <span class="bottom">4</span>
+              </label>
+              <button  class="btn text-white bg-danger button-left" onclick="JednakostranicniTrougao()" >Izračunaj</button>
+            </div>
+           
+           <div class="container col-4 bg-info">
+               
+             <h1 class="text-white" >Jednakokraki trougao</h1>
+              <br>
+              <label>Stranica a:</label>
+              <input id="jednakokrA" class="poravnaj-lijevo" type="text" placeholder="Manja Strana-Baza">
+              <br> <br>
+              <label>Stranica b:</label>
+              <input id="jednakokrB" class="poravnaj-lijevo" type="text" placeholder="Veće Strane-Kraci">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left:3.5em"  id="obimJednakokrakog" type="text" placeholder="Obim">
+              <br><br>
+              <label>Površina:</label>
+              <input style="margin-left:2.5em"  id="povrsinaJednakokrakog" type="text" placeholder="Površina">
+              <hr>
+              
+              
+              <label class="label-obim" for="">O=a+2*b</label>
+             <br>
+              <span style="color: white">P=</span>
+              <label class="label-obim frac" for="">
+                  <span>a*<math>
+                 <msqrt>
+                  <mi>
+                     4b-2
+                  </mi>
+              </msqrt>
+                  </span>
+    <span  class="symbol">/</span>
+    
+    <span class="bottom">4</span>
+</label>
+          
+          
+           
+           
+           
+           <button  class="btn text-white bg-danger button-left" onclick="Jednakokraki()">Izračunaj</button>
+           </div>
+           
+           <div class="container col-4 bg-warning">
+               
+             <h1 class="text-white" >Pravougli trougao</h1>
+              <br>
+              <label>Stranica a:</label>
+              <input id="pravougA" class="poravnaj-lijevo" type="text" placeholder="Kateta a">
+              <br> <br>
+              <label>Stranica b:</label>
+              <input id="pravougB" class="poravnaj-lijevo" type="text" placeholder="Kateta b">
+              <br> <br>
+              <label>Stranica c:</label>
+              <input id="pravougC" class="poravnaj-lijevo" type="text" placeholder="Hipotenuza" disabled>
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left: 3.5em" id="pravougObim" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label>Površina:</label>
+              <input style="margin-left: 2.5em" id="pravougPovrsina" type="text" placeholder="Površina">
+              <br>
+              
+    <hr>
+          <label for="">O=a+b+c</label>
+            <br>
+             <span style="color: white">P=</span>
+              <label class="label-obim frac" for="">
+                  <span>a*b</span>
+    <span class="symbol">/</span>
+    <span class="bottom">2</span>
+</label>
+          <button  class="btn text-white bg-danger button-left" onclick="Pravougli()">Izračunaj</button>
+           </div>
+           
+       </div> 
+    </div>
+    
+    
+   
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="container col-4 bg-info">
+               
+             <h1 class="text-white" >Romb</h1>
+              <br>
+              <label>Stranica a:</label>
+              <input id="RombA" class="poravnaj-lijevo" type="text" placeholder="Stranica a">
+              <br> <br>
+              <label id="rombVisina">Visina:</label>
+              <input id="RombH" class="poravnaj-lijevo" type="text" placeholder="Visina h">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left: 3.5em" id="RombObim" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label>Površina:</label>
+              <input style="margin-left: 2.5em" id="RombPovrsina" type="text" placeholder="Površina">
+              <p></p>
+               
+           <hr>
+           <label for="">O=4*a</label><br>
+           <label for="">P=a*h</label>
+           <button  class="btn text-white bg-danger button-left" onclick="Romb()">Izračunaj</button>
+           
+           </div>
+            
+            
+            <div class="container col-4 bg-warning">
+               
+             <h1 class="text-white" >Paralelogram</h1>
+              <br>
+              <label>Stranica a:</label>
+              <input id="ParalA" class="poravnaj-lijevo" type="text" placeholder="Stranica a">
+              <br> <br>
+              <label>Stranica b:</label>
+              <input id="ParalB" class="poravnaj-lijevo" type="text" placeholder="Stranica b">
+              <br> <br>
+              <label>Visina : </label>
+              <input id="ParalH" style="margin-left: 3.3em" class="poravnaj-lijevo" type="text" placeholder="Visina h">
+              <hr>
+              
+              
+              <label>Obim :</label>
+              <input style="margin-left: 3.5em" id="ParalObim" type="text" placeholder="Obim">
+              
+             
+              <br> <br>
+              <label>Površina:</label>
+              <input style="margin-left: 2.5em"  id="ParalPovrsina" type="text" placeholder="Površina">
+              <p></p>
+              
+               <hr>
+               <label for="">O=2*(a+b)</label><br>
+               <label for="">P=a*h</label>
+           
+            <button  class="btn text-white bg-danger button-left" onclick="Paralelogram()">Izračunaj</button>
+           
+           </div>
+           
+           <div class="container col-4 bg-success">
+               
+             <h1 class="text-white" >Trapez</h1>
+              <br>
+              <label >Stranica a:</label>
+              <input id="TrapezA" class="poravnaj-lijevo" type="text" placeholder="Gornja Stranica">
+              <br> <br>
+              <label >Stranica b:</label>
+              <input id="TrapezB" class="poravnaj-lijevo" type="text" placeholder="Donja Stranica">
+              <br> <br>
+              <label >Stranica c:</label>
+              <input id="TrapezC" class="poravnaj-lijevo" type="text" placeholder="Lijeva Stranica">
+              <br> <br>
+              <label>Stranica d:</label>
+              <input id="TrapezD" class="poravnaj-lijevo" type="text" placeholder="Desna Stranica">
+              <br> <br>
+              <label >Visina :</label>
+              <input id="TrapezH" style="margin-left: 3.5em" class="poravnaj-lijevo" type="text" placeholder="Visina">
+              <hr>
+              
+              
+              <label >Obim :</label>
+              <input style="margin-left: 3.6em" id="TrapezObim" type="text" placeholder="Obim">
+              
+              
+              <br> <br>
+              <label >Površina:</label>
+              <input style="margin-left: 2.8em" id="TrapezPovrsina" type="text" placeholder="Površina">
+              <p></p>
+              <hr>
+              <label for="">O=a+b+c+d</label>
+              <br>
+               <span style="color: white">P=</span>
+              <label class="label-obim frac" for="">
+                  <span>(a+b)*h</span>
+    <span class="symbol">/</span>
+    <span class="bottom">2</span>
+</label>
+          <button  class="btn text-white bg-danger button-left" onclick="Trapez()">Izračunaj</button>
+           
+           
+           
+           </div>
+            
+        </div>
+    </div>
+    
+   
+    <h1 class="bg-danger text-white">Obim i Zapremina</h1>
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid col-3 bg-warning">
+               
+               <h1>Kocka</h1>
+                
+                <br>
+              <label>Stranica :</label>
+              <input id="KockaA" class="poravnaj-lijevo" type="text" placeholder="Stranica a">
+              <hr>
+              
+              
+              <label>Površina:</label>
+              <input style="margin-left: 2em" id="KockaObim" type="text" placeholder="Površina">
+              
+              
+              <br> <br>
+              <label>Zapremina:</label>
+              <input id="KockaPovrsina" style="margin-left: 1em" type="text" placeholder="Zapremina">
+              <p></p>
+              
+              <p></p>
+              <hr>
+              <label for="">O=a<sup>3</sup></label><br>
+              <label for="">P=6*a<sup>2</sup></label><br>
+              <button  id="btnKocka" class="btn text-white bg-danger kocka-left" onclick="Kocka()">Izračunaj</button>
+              <br>
+            </div>
+            
+            <div class="container-fluid col-3 bg-info">
+            <h1>Lopta</h1>
+            <br>
+              <label>Polupreč:</label>
+              <input style="margin-left: 2.3em" id="LoptaR" class="poravnaj-lijevo" type="text" placeholder="Poluprečnik">
+              <hr>
+              
+              
+              <label>Površina:</label>
+              <input style="margin-left: 2.5em" id="LoptaPovrsina" type="text" placeholder="Površina">
+              
+              
+              <br> <br>
+              <label>Zapremina:</label>
+              <input id="LoptaZapremina" style="margin-left: 1.5em" class="poravnaj-lijevo" type="text" placeholder="Zapremina">
+              <p></p>
+              <hr>
+              <label for="">O=4*r<sup>2</sup>*π</label><br>
+              <label for=""><span style="color: white">P=</span>
+              <label class="label-obim frac" for="">
+                  <span>4 * r<sup>3</sup> * π</span>
+    <span class="symbol">/</span>
+    <span class="bottom">3</span>
+</label><br>
+              <button style="margin-left:8em;color:yellow;margin-top:auto;" onclick="Lopta()" class="btn text-white bg-danger">Izračunaj</button>
+            </div>
+            
+            <div class="container-fluid col-3 bg-success">
+            <h1>Valjak</h1>
+            <br>
+              <label>Poluprečnik:</label>
+              <input id="ValjakR" style="margin-left:1.3em " type="text" placeholder="Poluprečnik">
+              <br> <br>
+              <label>Visina:</label>
+              <input style="margin-left: 3.9em" id="ValjakH"  type="text" placeholder="Visina">
+              <hr>
+              
+              
+              <label>Površina:</label>
+              <input style="margin-left:2.7em " id="ValjakPovrsina" type="text" placeholder="Površina">
+              
+              
+              <br> <br>
+              <label>Zapremina:</label>
+              <input style="margin-left:1.7em " id="ValjakVolumen" type="text" placeholder="Zapremina">
+              <p></p>
+              
+              <br><br>
+              <hr>
+              <label for="">V=r<sup>2</sup>*h*π</label><br>
+              <label for="">P=(2*r<sup>2</sup>*π)+(2*r*h*π)</label><br>
+              <button style="margin-left:11em;color: yellow " class="btn text-white bg-danger" onclick="Valjak()">Izračunaj</button>
+            </div>
+            
+            <div class="container-fluid col-3 bg-danger">
+            <h1>Kupa</h1>
+            <br>
+              <label>Polupreč:</label>
+              <input id="KupaR" class="poravnaj-lijevo" type="text" placeholder="Poluprečnik">
+              <br> <br>
+              <label>Kosina:</label>
+              <input id="KupaS" style="margin-left:3em" type="text" placeholder="Kosina">
+              <br> <br>
+              <label>Visina : </label>
+              <input id="KupaH" style="margin-left: 3.3em" class="poravnaj-lijevo" type="text" placeholder="Visina">
+              <hr>
+             
+              
+              <label>Površina:</label>
+              <input style="margin-left: 2.5em " id="KupaPovrsina" type="text" placeholder="Površina">
+              
+              
+              <br> <br>
+              <label>Zapremina:</label>
+              <input style="margin-left: 1.5em " id="KupaVolumen" type="text" placeholder="Zapremina">
+              <p></p>
+              <hr>
+              
+                  <span style="color: white">V=</span>
+              <label class="label-obim frac" for="">
+                  <span> r<sup>2</sup>*π*h</span>
+    <span class="symbol">/</span>
+    <span class="bottom">3</span>
+
+              </label><br>
+              <label for="">P=(r<sup>2</sup>*π)+(r*s*π)</label><br>
+              
+              <button style="margin-left: 11em;color: yellow" class="btn text-white bg-info" onclick="Kupa()">Izračunaj</button>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+    <br><br>
+    <p></p>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
